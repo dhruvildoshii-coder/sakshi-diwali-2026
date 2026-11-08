@@ -13,133 +13,116 @@
 <body>
 <div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 <div id="confetti-layer" aria-hidden="true"></div>
-<header class="topbar"><div class="brand">✦ SAKSHI’S DIWALI</div><button id="sound-toggle" class="sound-toggle" aria-label="Toggle sound">♫ <span>Sound on</span></button></header>
+<header class="topbar"><div class="brand">✦ SAKSHI’S DIWALI</div><div class="top-note">A little world made with love ♡</div></header>
 
 <main>
 <section id="welcome" class="screen active">
-  <div class="hero-art">
-    <div class="moon"></div><div class="mandala">✺</div>
-    <div class="hanging h1">✦</div><div class="hanging h2">✧</div>
-    <div class="hero-diya diya-big"><i></i><b></b></div>
-    <div class="hero-diya diya-small"><i></i><b></b></div>
-    <div class="hero-spark s1">✧</div><div class="hero-spark s2">✦</div><div class="hero-spark s3">✧</div>
-  </div>
-  <p class="eyebrow">A tiny festival, made just for you</p>
+  <div class="hero-art"><div class="moon"></div><div class="mandala">✺</div><div class="hanging h1">✦</div><div class="hanging h2">✧</div><div class="hero-diya diya-big"><i></i><b></b></div><div class="hero-diya diya-small"><i></i><b></b></div><div class="hero-spark s1">✧</div><div class="hero-spark s2">✦</div><div class="hero-spark s3">✧</div></div>
+  <p class="eyebrow">A TINY FESTIVAL, MADE JUST FOR YOU</p>
   <h1 class="hero-title">Sakshi <em>Babyyy</em></h1>
   <p class="hero-sub">Your very own little Diwali wonderland.<br>Made with a lot of love (and a little bit of madness).</p>
-  <button class="primary-btn" id="enter-btn">Enter your surprise <span>✦</span></button>
-  <p class="tiny-note">P.S. Best experienced with sound on and that pretty smile of yours.</p>
-</section>
-
-<section id="festival" class="screen">
-  <div class="section-head"><p class="eyebrow">WELCOME TO YOUR FESTIVAL</p><h2>Let's light up<br><em>your Diwali.</em></h2><p>There are little surprises hiding everywhere. Go on, explore. 💛</p></div>
-  <div class="activity-grid">
-    <button class="activity-card rangoli-card" data-open="rangoli"><span class="card-icon">🌸</span><b>Rangoli studio</b><small>Make a little masterpiece</small><span class="card-arrow">↗</span></button>
-    <button class="activity-card diya-card" data-open="diyas"><span class="card-icon">🪔</span><b>Light the diyas</b><small>Bring the night to life</small><span class="card-arrow">↗</span></button>
-    <button class="activity-card spark-card" data-open="sparklers"><span class="card-icon">✨</span><b>Phooljhadi time</b><small>Draw with little stars</small><span class="card-arrow">↗</span></button>
-    <button class="activity-card fire-card" data-open="fireworks"><span class="card-icon">🎆</span><b>Fireworks sky</b><small>Make some noise (the cute kind)</small><span class="card-arrow">↗</span></button>
-    <button class="activity-card gift-card" data-open="gifts"><span class="card-icon">🎁</span><b>Little gifts</b><small>Open what I left for you</small><span class="card-arrow">↗</span></button>
-    <button class="activity-card memory-card" data-open="memories"><span class="card-icon">💌</span><b>Our memories</b><small>Us being us</small><span class="card-arrow">↗</span></button>
-  </div>
-  <button class="finale-invite" id="finale-invite">When you're done exploring... there's one last surprise <span>💌</span></button>
-  <div class="festival-footer"><span>Made for my favourite girl</span><span>✦ ✧ ✦</span></div>
+  <button class="primary-btn" id="enter-btn">Begin our Diwali adventure <span>✦</span></button>
+  <p class="tiny-note">One little surprise at a time. Complete each page to unlock the next. 💛</p>
 </section>
 
 <section id="rangoli" class="screen activity-screen">
-  <button class="back-btn" data-back="festival">← Festival</button>
-  <p class="eyebrow">ACTIVITY 01 · YOUR ART CORNER</p><h2>Rangoli, but make it <em>you.</em></h2>
+  <div class="step-label">01 / 06 · YOUR ART CORNER</div>
+  <p class="eyebrow">LET'S START WITH COLOURS</p><h2>Rangoli, but make it <em>you.</em></h2>
   <p class="instruction">Pick a colour and move your finger around the canvas. Go full artist, babyyy.</p>
   <div class="rangoli-wrap"><canvas id="rangoli-canvas"></canvas><div class="rangoli-center">✦</div></div>
   <div class="palette" id="palette"><button style="--c:#ff477e" class="selected"></button><button style="--c:#ffb22e"></button><button style="--c:#6ee7d8"></button><button style="--c:#a78bfa"></button><button style="--c:#fff1a8"></button><button style="--c:#f4f0e8"></button></div>
-  <div class="button-row"><button class="secondary-btn" id="clear-rangoli">Start again</button><button class="primary-btn" data-back="festival">Looks pretty! ✨</button></div>
+  <div class="button-row"><button class="secondary-btn" id="clear-rangoli">Start again</button><button class="primary-btn next-btn" id="next-rangoli" disabled>Complete your rangoli to continue ✨</button></div>
 </section>
 
 <section id="diyas" class="screen activity-screen">
-  <button class="back-btn" data-back="festival">← Festival</button>
-  <p class="eyebrow">ACTIVITY 02 · A LITTLE LIGHT</p><h2>Light every diya,<br><em>one by one.</em></h2>
-  <p class="instruction">Tap each diya to light it up. Every little light comes with a little wish for you.</p>
+  <div class="step-label">02 / 06 · A LITTLE LIGHT</div><p class="eyebrow">MAKE A WISH WITH EVERY FLAME</p>
+  <h2>Light every diya,<br><em>one by one.</em></h2>
+  <p class="instruction">Tap all five diyas to light them up. Every little light comes with a little wish for you.</p>
   <div class="diya-field" id="diya-field">
     <button class="diya-tile" data-wish="May your days be as bright as your smile."><span class="flame">🔥</span><span class="bowl">🪔</span><small>tap me</small></button>
     <button class="diya-tile" data-wish="More laughter, more adventures, more us."><span class="flame">🔥</span><span class="bowl">🪔</span><small>tap me</small></button>
     <button class="diya-tile" data-wish="May all the lovely things find their way to you."><span class="flame">🔥</span><span class="bowl">🪔</span><small>tap me</small></button>
-    <button class="diya-tile" data-wish="And may I always get to be your favourite nuisance."><span class="flame">🔥</span><span class="bowl">🪔</span><small>tap me</small></button>
+    <button class="diya-tile" data-wish="May I always get to be your favourite nuisance."><span class="flame">🔥</span><span class="bowl">🪔</span><small>tap me</small></button>
     <button class="diya-tile" data-wish="One day, all these lights will be in our home. 🥹"><span class="flame">🔥</span><span class="bowl">🪔</span><small>tap me</small></button>
   </div>
-  <div id="wish-pop" class="wish-pop" aria-live="polite">Your little wishes will appear here ✨</div>
-  <button class="primary-btn" data-back="festival">Take this glow with you</button>
+  <div id="wish-pop" class="wish-pop">Your little wishes will appear here ✨</div>
+  <button class="primary-btn next-btn" id="next-diyas" disabled>Light all the diyas to continue 🪔</button>
 </section>
 
 <section id="sparklers" class="screen activity-screen">
-  <button class="back-btn" data-back="festival">← Festival</button>
-  <p class="eyebrow">ACTIVITY 03 · SPARKLE MODE</p><h2>Make your own <em>stardust.</em></h2>
+  <div class="step-label">03 / 06 · SPARKLE MODE</div><p class="eyebrow">A LITTLE MAGIC AT YOUR FINGERTIPS</p>
+  <h2>Make your own <em>stardust.</em></h2>
   <p class="instruction">Drag your finger anywhere in the night sky. Leave a trail of sparkles behind.</p>
-  <div id="sparkle-pad" class="sparkle-pad"><span class="sky-hint">✨ touch & move ✨</span></div>
-  <button class="primary-btn" data-back="festival">That was magical</button>
+  <div id="sparkle-pad" class="sparkle-pad"><span class="sky-hint">✨ TOUCH & MOVE ✨</span></div>
+  <button class="primary-btn next-btn" id="next-sparklers" disabled>Make some stardust to continue ✨</button>
 </section>
 
 <section id="fireworks" class="screen activity-screen">
-  <button class="back-btn" data-back="festival">← Festival</button>
-  <p class="eyebrow">ACTIVITY 04 · THE NIGHT SKY</p><h2>Ready, set, <em>celebrate!</em></h2>
-  <p class="instruction">Tap anywhere in the sky to launch a firework. Make this sky as colourful as you are.</p>
+  <div class="step-label">04 / 06 · THE NIGHT SKY</div><p class="eyebrow">THIS ONE'S GOING TO BE LOUD (IN A CUTE WAY)</p>
+  <h2>Ready, set, <em>celebrate!</em></h2>
+  <p class="instruction">Tap anywhere in the sky to launch three colourful fireworks.</p>
   <div id="firework-sky" class="firework-sky"><span class="sky-hint">TAP THE SKY</span></div>
-  <button class="primary-btn" data-back="festival">Back to the party</button>
+  <button class="primary-btn next-btn" id="next-fireworks" disabled>Launch 3 fireworks to continue 🎆</button>
 </section>
 
 <section id="gifts" class="screen activity-screen">
-  <button class="back-btn" data-back="festival">← Festival</button>
-  <p class="eyebrow">ACTIVITY 05 · OPEN WHEN READY</p><h2>Some little gifts,<br><em>from your person.</em></h2>
-  <p class="instruction">Choose a gift. I may or may not have hidden some very cheesy things inside.</p>
+  <div class="step-label">05 / 06 · OPEN WHEN READY</div><p class="eyebrow">A FEW LITTLE THINGS, FROM YOUR PERSON</p>
+  <h2>Some little gifts,<br><em>from your person.</em></h2>
+  <p class="instruction">Open all three. I may or may not have hidden some very cheesy things inside.</p>
   <div class="gift-grid">
     <button class="gift-box" data-message="Your smile. That's it. That's the gift. Please keep using it, especially around me. 🥹">🎁<small>Gift no. 1</small></button>
     <button class="gift-box" data-message="A lifetime supply of forehead kisses. Terms & conditions: non-refundable and unlimited. 😚">🎀<small>Gift no. 2</small></button>
     <button class="gift-box" data-message="One very annoying boy who is completely, ridiculously, hopelessly into you. Unfortunately, yours forever. 😭❤️">💝<small>Gift no. 3</small></button>
   </div>
   <div id="gift-reveal" class="gift-reveal">Your gift message will pop up here 💌</div>
-  <button class="primary-btn" data-back="festival">I want more surprises</button>
+  <button class="primary-btn next-btn" id="next-gifts" disabled>Open all your little gifts 🎁</button>
 </section>
 
 <section id="memories" class="screen activity-screen">
-  <button class="back-btn" data-back="festival">← Festival</button>
-  <p class="eyebrow">ACTIVITY 06 · MY FAVOURITE PEOPLE</p><h2>Us, in little <em>frames.</em></h2>
-  <p class="instruction">A few moments I wish I could put in my pocket and carry around. Swipe through, babyyy.</p>
+  <div class="step-label">06 / 06 · MY FAVOURITE PEOPLE</div><p class="eyebrow">A FEW MOMENTS I'D KEEP FOREVER</p>
+  <h2>Us, in little <em>frames.</em></h2>
+  <p class="instruction">Swipe through every photo, babyyy. There's a little memory waiting in each frame.</p>
   <div class="memory-stage">
     <button class="memory-nav" id="prev-memory" aria-label="Previous memory">‹</button>
-    <div class="polaroid"><img id="memory-image" src="assets/memory-01.jpeg" alt="A favourite memory of us"><div class="polaroid-caption" id="memory-caption">My favourite smile. Obviously yours.</div></div>
+    <div class="polaroid"><img id="memory-image" src="memory-01.jpeg" alt="A favourite memory of us"><div class="polaroid-caption" id="memory-caption">My favourite smile. Obviously yours.</div></div>
     <button class="memory-nav" id="next-memory" aria-label="Next memory">›</button>
   </div>
-  <div class="memory-dots" id="memory-dots"></div>
-  <p class="memory-counter" id="memory-counter">01 / 10</p>
-  <button class="primary-btn" data-back="festival">Keep these close ❤️</button>
+  <div class="memory-dots" id="memory-dots"></div><p class="memory-counter" id="memory-counter">01 / 10</p>
+  <button class="primary-btn next-btn" id="next-memories" disabled>See all our memories to continue ❤️</button>
 </section>
 
 <section id="finale" class="screen finale-screen">
-  <div class="finale-lights"></div>
-  <p class="eyebrow">ONE LAST THING, SAKSHI BABYYY</p>
+  <div class="finale-lights"></div><p class="eyebrow">ONE LAST THING, SAKSHI BABYYY</p>
+  <h2 class="finale-heading">A little piece of my heart,<br><em>just for you.</em></h2>
+  <div class="final-gallery" aria-label="Our favourite memories">
+    <figure><img src="memory-01.jpeg" alt="Our memory 1"></figure><figure><img src="memory-02.jpeg" alt="Our memory 2"></figure>
+    <figure><img src="memory-03.jpeg" alt="Our memory 3"></figure><figure><img src="memory-04.jpeg" alt="Our memory 4"></figure>
+    <figure><img src="memory-05.jpeg" alt="Our memory 5"></figure><figure><img src="memory-06.jpeg" alt="Our memory 6"></figure>
+    <figure><img src="memory-07.jpeg" alt="Our memory 7"></figure><figure><img src="memory-08.jpeg" alt="Our memory 8"></figure>
+    <figure><img src="memory-09.jpeg" alt="Our memory 9"></figure><figure><img src="memory-10.jpeg" alt="Our memory 10"></figure>
+  </div>
   <div class="envelope" id="envelope"><div class="env-back"></div><div class="env-letter">💌</div><div class="env-flap"></div><div class="env-front"></div></div>
   <h2 id="envelope-title">There's something<br><em>I really want you to read.</em></h2>
   <button id="open-letter" class="primary-btn">Open your letter 💗</button>
   <div id="letter" class="letter hidden">
     <div class="letter-top"><span>For my Sakshi Babyyyy</span><span>✦ with all my love ✦</span></div>
-    <div class="letter-photo"><img src="assets/memory-01.jpeg" alt="Us, together"></div>
+    <div class="letter-photo"><img src="memory-01.jpeg" alt="Us, together"></div>
     <p class="letter-script">babyyyy,</p>
     <p>I don’t think you realise how many little reasons you give me to smile without even trying. Sometimes it’s just the way you look at me, sometimes it’s the most random things you say, and sometimes it’s simply having you around. And somehow, all of those little things have become some of my favourite things in the world.</p>
     <p>I kept thinking about how lucky I am that out of all the people in this world, I get to have you as my person. The one I can be stupid with, laugh with, annoy endlessly, share the most random thoughts with and still find myself falling for a little more every single time.</p>
     <p>You know what I love the most, baby? It’s that I don’t need everything to be planned or perfect when I’m with you. Even the simplest moments become something I want to hold on to. I love the comfort we share, the little madness, the affection, the way we find happiness in the tiniest things. And honestly, I wouldn’t trade that feeling for anythinggg.</p>
-    <div class="letter-memory"><img src="assets/memory-03.jpeg" alt="A favourite festive memory"><span>Just us being us. My favourite thing.</span></div>
-    <p>I have so many things I want to experience with you. So many festivals, so many celebrations, so many random little dates, so many sunsets and so many memories that we haven’t even made yet. I catch myself imagining all of it, and it genuinely makes me sooo happy. I hope we get to look back one day and laugh at how excited we were about all these little things.</p>
+    <div class="letter-memory"><img src="memory-03.jpeg" alt="A favourite memory"><span>Just us being us. My favourite thing.</span></div>
+    <p>I have so many things I want to experience with you. So many festivals, so many celebrations, so many random little dates, so many sunsets and so many memories that we haven’t even made yet. I catch myself imagining all of it, and it genuinely makes me sooo happy.</p>
     <p>For now, I just want you to know that you are loved, babyyyy. More than I probably manage to express, more than my random texts and silly compliments could ever explain. And if there’s one thing I want you to carry with you beyond all these lights and celebrations, it’s that I am really, really happy it’s you.</p>
-    <p>Keep smiling that pretty smile, keep being your crazy little self, and please never stop being this ridiculously adorable human who has me wrapped around her little finger. 😭</p>
-    <div class="forever-note"><span class="tiny-label">A little wish for next Diwali...</span><h3>Hopefully next Diwali<br>tu mere ghar pe hi aa jaaye,<br><em>hamesha ke liye.</em> 🥹❤️</h3><p>No more counting the hours until we meet. Just you, me, our home, too many diyas, too much mithai and a lifetime of celebrations. Bas, this is the dream, babyyy.</p></div>
+    <div class="forever-note"><span class="tiny-label">A LITTLE WISH FOR NEXT DIWALI...</span><h3>Hopefully next Diwali<br>tu mere ghar pe hi aa jaaye,<br><em>hamesha ke liye.</em> 🥹❤️</h3><p>No more counting the hours until we meet. Just you, me, our home, too many diyas, too much mithai and a lifetime of celebrations. Bas, this is the dream, babyyy.</p></div>
     <p>Happy Diwali, my Sakshi Babyyyy! May this year bring you endless happiness, beautiful surprises and everything your heart has been wishing for.</p>
-    <p>Saal Mubarakkk, my loveee! 🥰🧿</p>
-    <p>Here’s to us, to everything we’ve been, everything we are, and everything we’re yet to become.</p>
+    <p>Saal Mubarakkk, my loveee! 🥰🧿</p><p>Here’s to us, to everything we’ve been, everything we are, and everything we’re yet to become.</p>
     <p class="letter-script signoff">I loveeee youuu sooo muchhh,<br>my wifeyyyy. 🫣❤️🫂</p>
     <p class="signature">Forever your annoying person,<br><strong>Dhruvil ❤️</strong></p>
-    <div class="music-player"><div class="music-disc">♫</div><div class="music-meta"><b>Soniyo</b><small>A little soundtrack for this little letter</small></div><button id="play-song" class="play-song">▶ Play our song</button></div>
-    <audio id="song" src="assets/soniyo.mp3" preload="metadata"></audio>
+    <div class="music-player"><div class="music-disc">♫</div><div class="music-meta"><b>Soniyo</b><small>Our little soundtrack, on repeat ♡</small></div></div>
+    <audio id="song" src="soniyo.mp3" preload="auto" loop></audio>
     <p class="letter-end">Made with all my love, just for you. ✦</p>
   </div>
-  <button id="return-festival" class="secondary-btn hidden">Back to our Diwali wonderland</button>
 </section>
 </main>
 <footer class="site-footer">A little world made by Dhruvil, for Sakshi <span>♥</span></footer>
